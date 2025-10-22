@@ -113,15 +113,15 @@ if(FALSE) {
     n    = 400,
     tau  = 0.5,
     alpha = 0,        # NULL via alpha=0 (so alpha*beta=0)
-    beta  = 0.8,
-    gamma = 0.3,
+    beta  = 1,
+    gamma = 1,
     Rboot = 300       # increase for higher-precision per-rep p-values
   )
 
   print(res_null$rates)       # rejection rates at 1%, 5%, 10%
   print(res_null$ks)          # KS test vs Uniform(0,1)
 
-  plots <- plot_pval_diagnostics(res_null$pvals, title_suffix = " (alpha=0 null)")
+  plots <- plot_pval_diagnostics(res_null$pvals)
   print(plots$hist)
   print(plots$ecdf)
   print(plots$qq)

@@ -100,17 +100,29 @@ plan(multisession, workers = parallel::detectCores() - 1)
 source("sim_qq_plot.R")  # contains simulate_pvals()
 res <- simulate_pvals(
   Nrep = 500,
-  n = 400,
+  n = 300,
   tau = 0.5,
   alpha = 0,
   beta = 1,
   gamma = 1,
   Rboot = 200
 )
+#> Warning: glm.fit: algorithm did not converge
+#> Warning: glm.fit: algorithm did not converge
+#> Warning: glm.fit: algorithm did not converge
+#> Warning: glm.fit: algorithm did not converge
+#> Warning: glm.fit: algorithm did not converge
+#> Warning: glm.fit: algorithm did not converge
+#> Warning: glm.fit: algorithm did not converge
+#> Warning: glm.fit: algorithm did not converge
+#> Warning: glm.fit: algorithm did not converge
+```
+
+``` r
 
 res$rates     # rejection rates at 1%, 5%, 10%
 #>  alpha_1%  alpha_5% alpha_10% 
-#>     0.018     0.062     0.114
+#>     0.014     0.056     0.102
 ```
 
 ``` r
@@ -119,7 +131,7 @@ res$ks        # KS test against Uniform(0,1)
 #>  Asymptotic one-sample Kolmogorov-Smirnov test
 #> 
 #> data:  pvals
-#> D = 0.044, p-value = 0.2877
+#> D = 0.037, p-value = 0.5004
 #> alternative hypothesis: two-sided
 ```
 

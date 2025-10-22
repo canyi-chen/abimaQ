@@ -104,7 +104,7 @@ plan(multisession, workers = parallel::detectCores() - 1)
 source("sim_qq_plot.R")  # contains simulate_pvals()
 res <- simulate_pvals(
   Nrep = 500,
-  n = 400,
+  n = 300,
   tau = 0.5,
   alpha = 0,
   beta = 1,
