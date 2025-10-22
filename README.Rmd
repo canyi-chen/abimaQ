@@ -116,7 +116,7 @@ res$rates     # rejection rates at 1%, 5%, 10%
 res$ks        # KS test against Uniform(0,1)
 
 # Diagnostic plot
-plots <- plot_pval_diagnostics(res$pvals, title_suffix = " (alpha=0 null)")
+plots <- plot_pval_diagnostics(res$pvals)
 print(plots$hist)
 print(plots$qq)
 ```

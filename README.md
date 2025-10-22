@@ -138,7 +138,7 @@ res$ks        # KS test against Uniform(0,1)
 ``` r
 
 # Diagnostic plot
-plots <- plot_pval_diagnostics(res$pvals, title_suffix = " (alpha=0 null)")
+plots <- plot_pval_diagnostics(res$pvals)
 print(plots$hist)
 ```
 
