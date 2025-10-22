@@ -1,0 +1,18 @@
+Package: abimaQ
+Title: Adaptive Bootstrap Inference for Quantile Mediation Analysis with
+        Enhanced Statistical Power
+Version: 1.0
+Authors@R: 
+    c(person("Canyi", "Chen", , "cychen.stats@outlook.com", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0002-0673-5812")),
+           person("Yinqiu", "He", role = c("aut")),
+           person("Huixia J.", "Wang", role = c("aut")),
+           person("Gongjun", "Xu", role = c("aut")),
+    person("Peter X.-K.", "Song", , role = c("aut", "cph")))
+Description: Assess whether and how a specific continuous exposure affects the outcome of interest at a given quantile level through one-dimensional mediator using an  adaptive bootstrap (AB) approach. The AB method allows to make inference for composite null hypotheses of no mediation effect, providing valid type I error control and thus optimizes statistical power. For more technical details, refer to Chen, He, Wang, Xu and Song <doi:10.48550/arXiv.2412.15401>
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.1
+Imports: 
+    fastglm, stats, boot
